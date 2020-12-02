@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-const count = 10000
+const count = 100000
 
 type TXS struct {
 	TX [count]map[string]interface{}
@@ -65,7 +65,7 @@ func WriteTXJSON() {
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-	err = ioutil.WriteFile("testtxs.json", txToJSON, os.ModeAppend)
+	err = ioutil.WriteFile("testtxs-shard0-100000.json", txToJSON, os.ModeAppend)
 	if err != nil {
 		fmt.Println("error:", err)
 	}

@@ -36,7 +36,7 @@ func queryStats(interval *uint) {
 	ticker := time.NewTicker(intv * time.Second)
 
 	// url := "https://rpc.s0.t.hmny.io"
-	url := "http://172.31.9.176:9500"
+	url := "http://0.0.0.0:9500"
 	// 先query出有几个shard
 	shardNum := GetShardNum(url)
 
@@ -59,7 +59,7 @@ func statsInit(shardNum int, interval uint) (string, []string) {
 	for i := 0; i < shardNum; i++ {
 		num := strconv.Itoa(i + 9500)
 		// url := "https://rpc.s" + num + ".t.hmny.io"
-		url := "http://172.31.9.176:" + num
+		url := "http://0.0.0.0:" + num
 
 		go func(i int) {
 			// 再query每个shard的当前高度
@@ -98,7 +98,7 @@ func stats(shardNum int, interval uint, blockNumOld []string) (string, []string)
 	for i := 0; i < shardNum; i++ {
 		num := strconv.Itoa(i + 9500)
 		// url := "https://rpc.s" + num + ".t.hmny.io"
-		url := "http://172.31.9.176:" + num
+		url := "http://0.0.0.0:" + num
 
 		go func(i int) {
 			// 再query每个shard的当前高度
