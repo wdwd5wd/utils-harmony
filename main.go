@@ -27,12 +27,12 @@ func main() {
 	// // 读取BLS key以及账户address，并把他们按规则生成DeployAccount
 	// _, BLSkey, _ := ListDir("../harmony/.hmy", ".key")
 	// // fmt.Println(BLSkey, err)
-	// acc := ReadAcc("../go-sdk/account.txt")
-	// DeployAccount(acc, BLSkey, 500, 250)
+	// acc := ReadAcc("../go-sdk/account600.txt")
+	// DeployAccount(acc, BLSkey, 600, 600)
 
 	// // 读取BLS key，生成ReSharding.txt文件
 	// BLSkey, _, _ := ListDir("../harmony/.hmy", ".key")
-	// ReSharding(BLSkey, 15, 250)
+	// ReSharding(BLSkey, 0, 600)
 
 }
 
